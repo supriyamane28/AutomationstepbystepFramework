@@ -1,9 +1,10 @@
 <suite name="Loginsuite">
-<test name="Logintest">
-<classes>
+    <parameter name="browser" value="chrome"/>
 
-<class name="tests.Logintest"/>
-</classes>
-</test>
+
+    <test name="Logintest">
+        <classes>
+          <class name="tests.Logintest"/>
+        </classes>
+    </test>
 </suite>
-

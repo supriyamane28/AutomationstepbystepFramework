@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,17 @@
                     <div class="method-list-content passed suite-Loginsuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Loginsuite" title="tests.Logintest" class="method navigator-link" hash-for-method="testvalidlogin">testvalidlogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Loginsuite" title="tests.Logintest" class="method navigator-link" hash-for-method="testvalidlogin(user2, pass2)">testvalidlogin(user2, pass2)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Loginsuite" title="tests.Logintest" class="method navigator-link" hash-for-method="testvalidlogin(user1, pass1)">testvalidlogin(user1, pass1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Loginsuite" title="tests.Logintest" class="method navigator-link" hash-for-method="testvalidlogin(admin@yourstore.com, admin@yourstore.com)">testvalidlogin(admin@yourstore.com, admin@yourstore.com)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Loginsuite -->
@@ -126,9 +136,26 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testvalidlogin">
-                  </a> <!-- testvalidlogin -->
+                  <a name="testvalidlogin(user2, pass2)">
+                  </a> <!-- testvalidlogin(user2, pass2) -->
                   <span class="method-name">testvalidlogin</span>
+                  <span class="parameters">(user2,pass2)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testvalidlogin(user1, pass1)">
+                  </a> <!-- testvalidlogin(user1, pass1) -->
+                  <span class="method-name">testvalidlogin</span>
+                  <span class="parameters">(user1,pass1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testvalidlogin(admin@yourstore.com, admin@yourstore.com)">
+                  </a> <!-- testvalidlogin(admin@yourstore.com, admin@yourstore.com) -->
+                  <span class="method-name">testvalidlogin</span>
+                  <span class="parameters">(admin@yourstore.com,admin@yourstore.com)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -143,6 +170,7 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Loginsuite&quot;&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Logintest&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.Logintest&quot;/&gt;
@@ -185,16 +213,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testvalidlogin')
 data.setCell(0, 2, 'tests.Logintest')
-data.setCell(0, 3, 879);
+data.setCell(0, 3, 1187);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testvalidlogin')
+data.setCell(1, 2, 'tests.Logintest')
+data.setCell(1, 3, 782);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testvalidlogin')
+data.setCell(2, 2, 'tests.Logintest')
+data.setCell(2, 3, 611);
 window.suiteTableData['Loginsuite']= { tableData: data, tableDiv: 'times-div-Loginsuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 879 ms</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Loginsuite">
               </div> <!-- times-div-Loginsuite -->
             </div> <!-- times-div -->
@@ -221,17 +257,45 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">tests.Logintest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">cleanAllureReports</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">655 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testvalidlogin</span>
-                <span class="method-start">1911 ms</span>
+                <span class="method-name">testvalidlogin(user1, pass1)</span>
+                <span class="method-start">3259 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">2804 ms</span>
+                <span class="method-start">3913 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">4164 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testvalidlogin(user2, pass2)</span>
+                <span class="method-start">5824 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">6611 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">6798 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testvalidlogin(admin@yourstore.com, admin@yourstore.com)</span>
+                <span class="method-start">8500 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">9695 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

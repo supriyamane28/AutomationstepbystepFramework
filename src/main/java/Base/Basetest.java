@@ -1,5 +1,7 @@
 package Base;
 
+import java.io.File;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -17,7 +19,17 @@ public class Basetest {
 	
 	protected WebDriver driver;
 	
-	
+	@BeforeSuite
+    public void cleanAllureReports() {
+        File allureResults = new File("allure-results");
+
+        if (allureResults.exists()) {
+            for (File file : allureResults.listFiles()) {
+                file.delete();
+            }
+            System.out.println("🧹 Old Allure results cleaned!");
+        }
+    }
 	
 	
 	
