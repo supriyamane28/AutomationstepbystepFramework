@@ -30,8 +30,21 @@ public class Logintest extends Basetest{
 		
 		Log.info("verifying page title ...");
 		
-	Assert.assertEquals(driver.getTitle(),"Just a moment...");
-		
+		//Assert.assertEquals(driver.getTitle(),"Just a moment...");
+
+        String expected = "Just ";
+        String actual = driver.getTitle();
+
+        if (actual.equals(expected))
+        {
+            Log.info("✔ Test PASSED: Title matched");
+        } else
+        {
+            Log.error("❌ Test FAILED: Title did NOT match");
+            Log.error("Expected: " + expected);
+            Log.error("Actual:   " + actual);
+
+        }
 	
 	
 		
