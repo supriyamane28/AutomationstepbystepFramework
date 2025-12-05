@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Loginsuite]">
+  <parameter name="browser" value="chrome"/>
   <test thread-count="5" name="Logintest(failed)">
     <classes>
-      <class name="tests.Logintest">
+      <class name="tests.Failtestcase">
         <methods>
-          <include name="tearDownReport"/>
-          <include name="setUpReport"/>
-          <include name="testvalidlogin"/>
+          <include name="getResult"/>
+          <include name="testFail"/>
+          <include name="cleanAllureReports"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- tests.Logintest -->
+      </class> <!-- tests.Failtestcase -->
     </classes>
   </test> <!-- Logintest(failed) -->
 </suite> <!-- Failed suite [Loginsuite] -->

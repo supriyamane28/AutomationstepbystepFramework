@@ -34,7 +34,7 @@ public class Logintest extends Basetest {
     }
 
     
-    @DataProvider(name="LoginData1")
+    @DataProvider(name="LoginData1")     //this is 2nd method to get data from Dataprovider method
     public Object[][] getData()
     {
 		return new Object[][]
